@@ -1,27 +1,16 @@
-Notepad is a Jekyll theme which is very simple, clean and beautiful. This theme is good for any blog.
-  
-Main Features:
+# Skinny Bones Jekyll Starter
 
-* Zurb Foundation 5 – css framework
-* Scss files with settings file
-* Fullscreen post covers with header wich will be bright or dark according to background image
-* Fast and light
-* Font Awesome
-* Disqus comments integration
-Y
-ou can set post image covers by using only Kramdown narkdown, just place something like this: ![cover-image](http://path-to-your-image.jpg)
+Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
 
-Credits:
+I'm currently using a variation of it on my personal website [Made Mistakes](http://mademistakes.com) with some modifications. To learn more about how to use the theme and install it check out the [Skinny Bones demo](http://mmistakes.github.io/skinny-bones-jekyll/) (*work in progress*).
 
-* Zurb Foundation 5 http://foundation.zurb.com/
-* Font Awesome http://fontawesome.io
-* Google fonts http://www.google.com/fonts
-* Background check http://kennethcachia.com/background-check
-* Codrops article: http://tympanus.net/codrops/2014/05/22/inspiration-for-article-intro-effects/
-* There are also tools like jQuery, Modernizr, Normalize.
+![screenshot of Skinny Bones](http://mmistakes.github.io/skinny-bones-jekyll/images/skinny-bones-theme-feature.jpg)
 
-If you'd like to give me credit somewhere on your blog or tweet a shout out to [@hmfaysal](https://twitter.com/hmfaysal), that would be pretty sweet.
+---
 
+## Notable Features
 
-Warm Regards and Stay Creative,  
-Hossain Mohd. Faysal
+* Stylesheet built using Sass. *Requires Jekyll 2.x*
+* Data files for easier customization of the site navigation/footer and for supporting multiple authors.
+* Optional Disqus comments, table of contents, social sharing links, and Google AdSense ads.
+* And more.
