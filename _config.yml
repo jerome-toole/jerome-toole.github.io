@@ -1,7 +1,7 @@
-title:            Notepad
-description:      "Blogging is fun"
+title:            Jerome Toole Design + Development
+description:      ""
 logo:             logo3.png
-disqus_shortname: hmfaysal
+disqus_shortname: jjjrome
 share:            true
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same 
@@ -10,24 +10,19 @@ share:            true
 
 # Owner/author information
 owner:
-  name:           Your Name
-  avatar:         hmfaysal.jpg
-  email:          you@email.com
+  name:           Jerome Toole
+  avatar:         jjjrome.jpg
+  email:          jerometoole@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    Awesome Dude, Awesome Life
+  description:    I've been taking photos and designing for a long time and have been making websites since 2012.
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        hmfaysal
-  facebook:       hmfaysal
-  github:         hmfaysal      
-  instagram:      hmfaysal
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:    https://plus.google.com/u/0/102602916593522619858
+  twitter:        jamrone
+  github:         jerome-toole      
+  instagram:      jjjrome
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
 google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
 
 # Links to include in footer navigation
 # For external links add external: true
