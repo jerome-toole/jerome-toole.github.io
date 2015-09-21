@@ -1,6 +1,10 @@
 # Site navigation links
 
-- title:
-  url:
+- title: Blog
+  url: http://manifestbyjerome.tumblr.com
+  excerpt:
+  image:
+- title: Design
+  url: http://design.jerometoole.co.uk
   excerpt:
   image:

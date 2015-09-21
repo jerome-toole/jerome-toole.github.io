@@ -7,15 +7,28 @@
    ========================================================================== */
 
 #masthead {
-	padding: $gutter;
+	position: absolute;
+	width: 100%;
 	z-index: 5;
-	@include transform(translate(0,0));
-	@include transition(500ms cubic-bezier(.645,.045,.355,1.000));
-	&.slide {
-		@include transform(translate(-1600px,0));
-	}
 	.inner-wrap {
 		@include outer-container;
+	}
+	.header-left,
+	.header-right {
+		position: absolute;
+	}
+	.header-left {
+		left: 3vw;
+	}
+	.header-right {
+		right: 3vw;
+	}
+	a {
+		color: $white;
+		&:hover {
+			color: darken($white, 20%);
+			transition: .2s;
+		}
 	}
 }
 .site-title {
@@ -26,99 +39,18 @@
 	padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
 	height: $masthead-height;
 	text-decoration: none;
-	color: $black;
 	font-family: $alt-font;
 	font-weight: 700;
 	@include font-size(20,no);
 	line-height: .5 * $masthead-height; // half the height to center vertically
 	text-transform: uppercase;
-}
-
-
-/*
-   Menus
-   ========================================================================== */
-
-.menu {
-	li {
-		float: left;
-		&:last-child a {
-			@include media($medium) {
-				margin-right: 0; // remove spacing from last menu link
-			}
-		}
-		a {
-			// line hover effect
-			position: relative;
-			display: block;
-			margin-right: $gutter;
-			padding: (.25 * $masthead-height) 0 (.25 * $masthead-height) ;
-			height: $masthead-height;
-			font-family: $alt-font;
-			&:before,
-			&:after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 2px;
-				@include transition(width 0.3s);
-			}
-			&:before {
-				width: 100%;
-				background: transparent;
-			}
-			&:after {
-				width: 0;
-				background: $black;
-			}
-			&:active:after,
-			&:hover:after {
-				width: 100%;
-			}
-		}
-	}
-}
-
-/* Top menu navigation */
-
-.top-menu {
 	display: none;
-	position: relative;
-	@include media($medium) {
-		@include span-columns(12);
-	}
-	@include media($large) {
-		@include span-columns(7);
-		ul {
-			position: absolute;
-			right: 0;
-		}
-	}
-	.home,
-	.sub-menu-item {
-		display: none;
-	}
-	li {
-		a {
-			font-weight: 700;
-			@include font-size(16,no);
-			line-height: .5 * $masthead-height; // half the height to center vertically
-			color: $black;
-			text-transform: uppercase;
-		}
+	@include media(370px) {
+		display: block;
 	}
 }
-
-/* Bottom menu navigation */
-
-.bottom-menu {
-	@include clearfix;
-	font-weight: 700;
-	a {
-		color: lighten($black,60);
-	}
+.home .site-title {
+	display: none;
 }
 
 
@@ -135,6 +67,9 @@
 	@include transition(500ms cubic-bezier(.645,.045,.355,1.000));
 	&.slide {
 		@include transform(translate(-60rem,0));
+	}
+	.home & {
+		padding: 0;
 	}
 }
 
@@ -155,6 +90,9 @@
 		.page-content {
 			@include fill-parent;
 			// larger font for intro paragraph
+			.home & {
+				padding: $gutter; // add white space for smaller screens
+			}
 			> p {
 				&:first-child {
 					@include font-size(20,yes,30);
@@ -334,18 +272,28 @@
    ========================================================================== */
 
 #site-footer {
-	@include outer-container;
-	margin-top: (3 * (0px + $doc-line-height));
-	margin-top: (3 * (0rem + ($doc-line-height / $doc-font-size)));
-	padding-bottom: $gutter;
+	@include row;
 	font-family: $alt-font;
+	padding: $gutter $gutter 0;
   /* Copyright text */
 	.copyright {
+		@include span-columns(6);
 		@include font-size(12);
 		color: lighten($black,60);
 		a {
 			color: lighten($black,60);
 			text-decoration: none;
+		}
+	}
+	nav {
+		@include span-columns(6);
+	}
+	@include media($micro) {
+		.copyright {
+			@include span-columns(3);
+		}
+		nav {
+			@include span-columns(9)
 		}
 	}
 }

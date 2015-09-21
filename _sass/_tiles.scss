@@ -2,8 +2,11 @@
    Tiles
    ========================================================================== */
 
-.tile {
+.tiles {
   @include outer-container;
+}
+
+.tile {
   margin-bottom: $gutter;
   @include media($micro) {
     @include fill-parent;

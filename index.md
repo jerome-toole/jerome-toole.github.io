@@ -1,11 +1,10 @@
 ---
-layout: archive
+layout: home
 permalink: /
-title: "Latest Posts"
+title: Home
 ---
-
 <div class="tiles">
-{% for post in site.posts %}
+{% for post in site.categories.stories %}
 	{% include post-grid.html %}
 {% endfor %}
 </div><!-- /.tiles -->

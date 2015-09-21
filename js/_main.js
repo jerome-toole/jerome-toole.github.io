@@ -8,13 +8,18 @@ $(document).ready(function(){
     // $('#masthead, #page-wrapper').toggleClass('slide');
     e.preventDefault();
   });
-});
+  
+  var supportsMixBlendMode = window.getComputedStyle(document.body).mixBlendMode;
+  if(!supportsMixBlendMode) {
+    $('.logo').css('opacity', '0.8');
+  }
 
-// FitVids
-$(document).ready(function(){
-	// Target your .container, .wrapper, .post, etc.
-	$("#main").fitVids();
-});
+  var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g);
+  if(iOS){
+    $('.billboard').css('height', $(window).height()+'px');
+  }
+  
+  $("#main").fitVids();
 
-// Table of Contents title. Change text to localize
-$("#markdown-toc").prepend("<li><h6>Overview</h6></li>");
+  $("#markdown-toc").prepend("<li><h6>Overview</h6></li>");
+});

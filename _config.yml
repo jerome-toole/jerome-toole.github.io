@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title: Jerome Toole Design
-description: I design websites and graphics. 
+title: Jerome Toole
+description: Photography and Photo Stories 
 logo: # 120x120 px default image used for Twitter summary card
 teaser: # 400x250 px default teaser image used in image archive grid
 locale:
@@ -11,7 +11,6 @@ url:
 
 sass:
     sass_dir: _sass
-    style: compressed
 permalink: /:categories/:title/
 kramdown:
   toc_levels: 1..2
@@ -28,7 +27,7 @@ owner:
   google:
     ad-client: 
     ad-slot: 
-  bio: Jerome is Jerome
+  bio: I do a lot of things but one I particularly love is making images. Capturing scenes and seeing them evolve and refine through the editing process is constantly fascinating to me. Sometimes the pictures tell a story and other times I'd rather they just sat there to be soaked up.
   avatar: jjjrome.jpg # 160x160 px image for author byline
 disqus-shortname:
 
