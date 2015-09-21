@@ -1,0 +1,32 @@
+---
+layout: default
+pageclass: home
+---
+
+<div id="main" role="main">
+  <div class="site-header">
+    <div class="billboard" style="background-image: url('{{ site.url }}/images/splash-1.jpg');">
+      <h1 class="logo">Jerome<br>Toole</h1>
+    </div>
+  </div>   
+  <div class="wrap">
+  <nav class="menu secondary-nav">
+    <ul>
+      <li>
+        <a href="./stories">Stories</a> 
+      </li>
+      <li>
+        <a href="./collections">Collections</a>
+      </li>
+      <li>
+        <a href="./commissions">Commissions</a>
+      </li>
+    </ul>
+  </nav>
+    <div class="archive-wrap">
+      <div class="page-content">
+        {{ content }}
+      </div><!-- /.page-content -->
+    </div class="archive-wrap"><!-- /.archive-wrap -->
+  </div><!-- /.wrap -->
+</div><!-- /#main -->
