@@ -119,6 +119,14 @@
 	}
 }
 
+.image-wrap {
+	text-align: center;
+	img {
+		margin-bottom: 1.5em;
+		max-height: 95vh;
+	}
+}
+
 #main {
 	.inner-wrap {
 		width: 100%;
