@@ -51,18 +51,14 @@ module.exports = function(grunt) {
         }]
       }
     },
-    imgcompress: {
-      dist: {
+    imageoptim: {
+      myTask: {
         options: {
-          optimizationLevel: 7,
-          progressive: true
+          jpegMini: true,
+          imageAlpha: false,
+          quitAfter: true
         },
-        files: [{
-          expand: true,
-          cwd: 'images/',
-          src: '{,*/}*.{png,jpg,jpeg}',
-          dest: 'images/'
-        }]
+        src: 'images/'
       }
     },
     svgmin: {
@@ -77,16 +73,20 @@ module.exports = function(grunt) {
     },
   });
 
+
   // Load tasks
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-imageoptim');
   grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-imgcompress');
   grunt.loadNpmTasks('grunt-imgcompress');
 
   // Register tasks
+  grunt.registerTask('default', ['imageoptim']);
   grunt.registerTask('scripts', ['watch', 'uglify']);
-  grunt.registerTask('images', ['newer:imgcompress', 'newer:svgmin']);
+  grunt.registerTask('images', ['newer:svgmin']);
 };

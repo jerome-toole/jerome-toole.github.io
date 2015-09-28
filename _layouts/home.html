@@ -6,11 +6,18 @@ pageclass: home
 <div id="main" role="main">
   <div class="site-header">
     <div class="billboard" style="background-image: url('{{ site.url }}/images/splash-1.jpg');">
-      <h1 class="logo">Jerome<br>Toole</h1>
+      <div class="page-feature__text {{page.title-position}}">
+        <h1 class="title"><span>Jerome</span><br><span>Toole</span></h1>
+        {% if page.description %}
+        <div class="post__description">
+          {{ page.description | markdownify }}
+        </div>
+        {% endif %}
+      </div>
     </div>
   </div>   
   <div class="wrap">
-  <nav class="menu secondary-nav">
+  <!-- <nav class="menu secondary-nav">
     <ul>
       <li>
         <a href="./stories">Stories</a> 
@@ -22,7 +29,7 @@ pageclass: home
         <a href="./commissions">Commissions</a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
     <div class="archive-wrap">
       <div class="page-content">
         {{ content }}

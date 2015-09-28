@@ -1,0 +1,24 @@
+---
+layout: null
+limit: 25
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title | xml_escape }} - Articles</title>
+    <link>{{ site.url }}</link>
+    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+    <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+    {% for post in site.posts limit:20 %}
+      <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <link>{{ site.url }}{{ post.url }}?utm_source=RSS&amp;utm_medium=RSS&amp;utm_campaign={{ post.title | replace: ',','' | replace: ' ', '' | xml_escape }}</link>
+        <media:content url="{{ site.imagepath }}/{{ post.image.feature }}" xmlns:media="http://search.yahoo.com/mrss/" medium="image" type="image/jpg"/>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <description>{% if post.description %}{{ post.description | xml_escape }}{% endif %}</description>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

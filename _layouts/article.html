@@ -3,17 +3,21 @@ layout: default
 ---
 
 <div id="main" role="main">
-	<article class="wrap" itemscope itemtype="http://schema.org/Article">
+	<article itemscope itemtype="http://schema.org/Article">
 		{% if page.image.feature %}
 		<div class="page-feature">
-			<div class="page-image">
-				<img src="{{ site.url }}/images/{{ page.image.feature }}" class="page-feature-image" alt="{{ page.title }}" itemprop="image">
+			<div class="page-image page-feature-image" style="background-image: url({{ site.imagepath }}/{{ page.image.feature }})">
+				<div class="page-feature__text {{page.title-position}}">
+					<h1 class="title"><span>{{ page.title }}</span></h1>
+					{% if page.descriptionNULL %}
+					<div class="post__description">
+						{{ page.description | markdownify }}
+					</div>
+					{% endif %}
+				</div>
 			</div><!-- /.page-image -->
 		</div><!-- /.page-feature -->
 		{% endif %}
-		<div class="page-title">
-			<h1>{{ page.title }}</h1>
-		</div>
 		<div class="inner-wrap">
 			<div id="content" class="page-content" itemprop="articleBody">
 				{{ content }}
