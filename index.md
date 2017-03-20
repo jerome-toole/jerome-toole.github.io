@@ -1,7 +1,7 @@
 ---
 layout: home
 permalink: /
-title: Home
+title: site.description
 ---
 <div class="tiles">
 {% for post in site.categories.stories %}
